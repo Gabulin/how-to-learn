@@ -1,31 +1,385 @@
+/*
+div {
+    border: 2px solid red;
+}
+*/
+
+span {
+  font-weight: bolder;
+}
+
 .page {
   min-width: 1100px;
-  /* мы ещё не умеем делать мобильную версию сайта, */
-  /* поэтому выше установлена минимальная ширина страницы */
+/* мы ещё не умеем делать мобильную версию сайта, */
+/* поэтому выше установлена минимальная ширина страницы */
   max-width: 1600px;
-  /* выше установили ограничение по максимальной ширине */
+/* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
-  /* выше для экранов больше 1600px отцентрировали весь контент */
+/* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 .header {
   height: 100vh;
   min-height: 600px;
-  max-height: 756px;
-  /* выше установили ограничения для секции */
+  min-width: 756px;
+/* выше установили ограничения для секции */
+  background-color: #f2f2f2;
+  display: flex;
+  position: relative;
+  flex-wrap:wrap;
 }
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+.header_column {
+  display: flex;
+  background-position: center;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  background-image: url(../images/logo_place_header.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.logo_place_header {
+  position:absolute;
+  top:30px;
+  left:64px;
+  order:1;
+  width:228px;
+  height:32px;
+  z-index: 2;
+}
+
+.title {
+  position: relative;
+  width:730px;
+  font-size:102px;
+  line-height:96px;
+  left:64px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+}
+
+.subtitle {
+  position: absolute;
+  line-height:25px;
+  font-size:18px;
+  bottom:30px;
+  left:64px;
+  width:388px;
+  z-index: 2;
+  font-weight: normal;
+}
+.link {
+  text-decoration: none;
+}
+
+a:link {
+  color: #2f80ed; 
+ }
+ a:visited {
+  color: #900060; 
+ }
+
+.header__main-illustration {
+  position: absolute;
+  right:0;
+  bottom:0;
+  background-image: url(../images/two_again.png);
+  width:765px;
+  height:608px;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index:1;
+  max-width:50%;
+}
+
 .header__square-pic {
+  position: absolute;
   height: 568px;
   width: 568px;
+  background-color: #2f80ed;
+  top:64px;
+  right:0;
 }
 
-/* и элемента с модификатором вида ключ-значение */
-.table__cell_theme_dark {
-  width: 200px;
+.description {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  
+}
+.two-columns {
+  margin-bottom:100px;
+  width:80%;
+  position: relative;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.brief {
+  width: 175px;
+  color:#2f80ed;
+  line-height: 1.2;
+  font-size: 18px;
+  left: 0;
+}
+
+.main-text {
+  min-width: 784px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  right: 0;
+  grid-row-gap: 30px;
+}
+
+.paragraph {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: normal;
+}
+
+.digits {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.digits__title {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section-title {
+  line-height:1.15;
+  font-size:60px;
+  font-weight: 600;
+}
+
+.section-subtitle {
+  line-height:34px;
+  font-size:24px;
+  margin-top:20px;
+}
+
+.table {
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position:relative;
+  margin-left: auto;
+  margin-right:auto;
+  width:1100px;
+  justify-content: space-between;
+}
+
+.cell {
+  width: 250px;
+  margin-top: 60px;
+  
+}
+
+.table-text_author {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+.feynman {
+  margin-top: 100px;
+  background-color: #f2f2f2;
+  background-image: url(../images/feynman.png);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 867px 637px;
+  position: relative;
+  height: 790px;
+}
+
+.feynman__title {
+  line-height:1.15;
+  font-size:120px;
+  font-weight: 600;
+  margin-top:100px;
+  z-index: 1;
+  width: 648px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.feynman__subtitle {
+  margin-top: 70px;
+  text-align: center;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+}
+
+.feynman__link {
+  position: absolute;
+  top: 50%;
+  right: 48px;
+  margin-left: auto;
+  text-align: right;
+}
+
+.kaufman {
+  padding-bottom:90px;
   color: white;
-  margin-right: 0;
+  background-color:#000;
+  min-height:877px;
+  overflow:hidden;
+  position: relative;
+}
+.triangle {
+  background-image: url(../images/kaufman-triangle.svg);
+  width:877px;
+  height:877px;
+  position: absolute;
+  background-repeat: no-repeat;
+  right:-210px;
+  top:0;
+}
+
+.section-title_theme_dark {
+  padding-top: 90px;
+  text-align: center;
+  z-index: 1;
+}
+
+.section-subtitle_theme_dark {
+  text-align: center;
+  z-index: 1;
+}
+.table_theme_dark {
+  padding-bottom: 90px;
+  grid-auto-flow: row;
+}
+
+.cell_theme_dark {
+  width: 200px;
   margin-top: 80px;
+}
+
+
+
+.footer {
+  padding-top:60px;
+  padding-bottom:40px;
+  background-color: #000;
+  color:white;
+  min-height:350px;
+}
+
+.columns {
+  width:90%;
+  margin-left:auto;
+  margin-right:auto;
+  position: relative;
+  min-height:350px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-basis: 711px;
+}
+
+.column {
+  margin-top:0;
+  margin-bottom:0;
+  margin-left:auto;
+  margin-right:auto;
+  width:100%;
+}
+
+.logo_place_footer {
+  background-image: url(../images/logo_place_footer.svg);
+  width:228px;
+  height:32px;
+  left:0;
+  top:0;
+  position: absolute;
+}
+
+
+
+.author {
+  line-height:25px;
+  font-size:18px;
+  margin-bottom:18px;
+  margin-top:18px;
+  bottom:0;
+  left:0;
+  position: absolute;
+  font-weight: normal;
+}
+
+.icons {
+  width:16px;
+  height:16px;
+  margin-right: 10px;
+}
+
+.content-social a:link {
+  color:#fff;
+}
+
+.content-social a:visited {
+  color: #cc9999;;
+}
+
+.content-social {
+  margin-bottom:16px;
+  margin-top: 20px;
+  flex-shrink:2;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.content-info {
+  line-height:30px;
+  font-size:18px;
+  flex-shrink:1.5;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.column-heading {
+  font-weight:600;
+  margin-bottom:20px;
+}
+
+.column-links {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.feinman a:link {
+  color:black;
 }
