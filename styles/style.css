@@ -1,11 +1,4 @@
 
-ul {
-  list-style-type: none;
-  list-style-position: outside;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 .two-columns__span-accent {
   font-weight: bolder;
 }
@@ -43,13 +36,13 @@ ul {
   background-repeat: no-repeat;
   width:228px;
   height:32px;
-  position: absolute;
 }
 
 .logo_place_header {
   background-image: url(../images/logo_place_header.svg);
   top:30px;
   left:64px;
+  position: absolute;
   order:1;
   z-index: 2;
 }
@@ -135,6 +128,8 @@ ul {
 }
 
 .two-columns__brief {
+  margin-top: 0;
+  margin-bottom: 0;
   width: 175px;
   color:#2f80ed;
   line-height: 1.2;
@@ -206,6 +201,7 @@ ul {
   font-size: 24px;
   font-weight: 600;
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .table__cell {
@@ -234,6 +230,8 @@ ul {
 }
 
 .feynman__title {
+  margin-top: 0;
+  margin-bottom: 0;
   line-height:1.15;
   font-size:120px;
   font-weight: 600;
@@ -357,14 +355,6 @@ ul {
   margin-right: 10px;
 }
 
-.footer__column_content-social a:link {
-  color:#fff;
-}
-
-.footer__column_content-social a:visited {
-  color: #cc9999;
-}
-
 .footer__column_content_social {
   display: flex;
   flex-direction: column;
@@ -376,6 +366,7 @@ ul {
 }
 
 .footer__column-heading {
+  line-height: 30px;
   font-weight:600;
   margin-bottom:20px;
   font-size: 18px;
@@ -392,5 +383,6 @@ ul {
 }
 
 .footer__column-links {
+  list-style-type: none;
   padding-left: 0em;
 }
