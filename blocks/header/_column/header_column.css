@@ -1,9 +1,0 @@
-.header_column {
-  display: flex;
-  background-position: center;
-  background-size: cover;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  position: relative;
-}
