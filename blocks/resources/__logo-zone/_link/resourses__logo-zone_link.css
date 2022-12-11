@@ -1,0 +1,4 @@
+.resourses__logo-zone_link:hover {
+  opacity: 70%;
+  transition: all 0.5s ease-out;
+}
